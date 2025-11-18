@@ -57,8 +57,29 @@ HALF SUBTRACTOR:
 
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: PORCHEZIAN S RegisterNumber: 25017994
+Developed by: PORCHEZIAN S 
 
+RegisterNumber: 25017994
+
+HALF ADDER:
+```
+module exp3a(a,b,s,c);
+input a,b;
+output s,c;
+xor g1(s,a,b);
+and g2(c,a,b);
+endmodule
+```
+
+HALF SUBTRACTOR:
+```
+module exp3b(a,b,diff,borr);
+input a,b;
+output diff,borr;
+assign diff=a^b;
+assign borr=(~a)&b;
+endmodule
+```
 **RTL Schematic**
 HALF ADDER:
 <img width="1660" height="831" alt="Screenshot 2025-11-18 111310" src="https://github.com/user-attachments/assets/caf04791-f785-4ef0-9435-6ef331ff13bd" />
